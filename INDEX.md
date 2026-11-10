@@ -2,7 +2,7 @@
 
 Digenerate oleh `python3 goodtech.py index`. Jangan edit manual.
 
-Total: 34 entry
+Total: 42 entry
 
 ## contracts
 
@@ -24,7 +24,9 @@ Total: 34 entry
 |---|---|---|---|---|
 | 8 | [LLM ngusulin, API resmi yang verifikasi (1 call, cache per pertanyaan)](backend/forkswiki-llm-proposes-github-verifies.md) | forks.wiki | verified | llm, verification, github, graphql, cache, cost |
 | 8 | [Ticket stateless (HMAC + AES-GCM) antar step multi-request](backend/forkswiki-stateless-signed-tickets.md) | forks.wiki | verified | serverless, hmac, aes-gcm, stateless, session, security |
+| 8 | [Ledger append-only (trigger DB) + hash-chain + anchor memo di Solana, bisa diverifikasi di browser](backend/mcpcredit-ledger-hashchain-solana-anchor.md) | mcp.credit (MCP Market) | verified | ledger, audit-trail, hash-chain, anchoring, transparency, custodial |
 | 8 | [Sync game pakai intent + claim, ledger ekonomi di server, txid idempotent + versi](backend/sindicat-intent-claim-server-ledger.md) | SINDICAT | verified | game, server-authoritative, anti-cheat, sync, idempotency, optimistic-concurrency |
+| 7 | [Kredit deposit: webhook cuma petunjuk, server baca tx dari chain sendiri, unique per (tx, token account)](backend/mcpcredit-deposit-credit-from-chain.md) | mcp.credit (MCP Market) | verified | deposit, webhook, idempotency, solana, helius, reconciliation |
 | 7 | [Respons API indexer yang jujur soal freshness (asOfBlock + lag + coverage)](backend/vibevibe-indexer-freshness-envelope.md) | vibe/vibe (Seedify) | verified | indexer, api-design, freshness, pagination, reorg |
 | 6 | [Cloud save offline-first dengan merge berdasarkan progress + optimistic concurrency (409 stale)](backend/tinylegends-cloud-save-progress-merge.md) | Tiny Legends | verified | game, save-sync, offline-first, concurrency, siwe |
 | 6 | [Remote config live dengan skema min/max/type + endpoint harga ber-flag stale](backend/tinylegends-remote-config-bounded-overrides.md) | Tiny Legends | verified | remote-config, live-ops, feature-flags, oracle, game-economy |
@@ -42,6 +44,7 @@ Total: 34 entry
 
 | Skor | Tech | Project | Status | Tags |
 |---|---|---|---|---|
+| 8 | [Pool alamat deposit dari seed offline, tiap alamat ditandatangani HMAC (server gak pegang key deposit)](infra/mcpcredit-offline-seed-deposit-pool.md) | mcp.credit (MCP Market) | verified | custody, deposit, key-management, hmac, solana, hot-wallet |
 | 7 | [Client engine di-pin pakai sha256 + client-side vault](infra/ordropz-sha256-pinned-client-engine.md) | Ord Dropz (shielded Ordinals launchpad) | verified | supply-chain, integrity, esm, client-side, psbt |
 | 7 | [Deploy immutable per "run" + frontend pin runtime hash bytecode](infra/vibevibe-immutable-runs-runtime-hash-pin.md) | vibe/vibe (Seedify) | verified | deployment, immutable, versioning, integrity, frontend-config |
 | 6 | [Pool vanity mint address (…fork) di-grind duluan](infra/forkswiki-vanity-mint-key-pool.md) | forks.wiki | verified | vanity, branding, keypair, solana, launchpad |
@@ -51,8 +54,11 @@ Total: 34 entry
 
 | Skor | Tech | Project | Status | Tags |
 |---|---|---|---|---|
+| 9 | [Tool sensitif cuma bisa dipencet user: MCP Apps visibility "app" + form pass HMAC](security/mcpcredit-app-only-tools-form-pass.md) | mcp.credit (MCP Market) | verified | mcp, ai-agent, prompt-injection, withdraw, mcp-apps, custodial |
+| 7 | [Aksi via AI dua langkah: preview dulu, kode sekali pakai berlaku 10 detik-10 menit, plus rate limit](security/mcpcredit-two-step-send-preview-code.md) | mcp.credit (MCP Market) | verified | ai-agent, mcp, confirmation, rate-limit, prompt-injection |
 | 7 | [Buyback oleh keeper dengan batas on-chain + ganti treasury 2 langkah](security/vibevibe-keeper-buyback-onchain-limits.md) | vibe/vibe (Seedify) | verified | keeper, buyback, burn, timelock, treasury, admin-limits |
 | 6 | [Filter ticker/nama anti-impersonation (homoglyph + leet + fonetik)](security/forkswiki-homoglyph-ticker-filter.md) | forks.wiki | verified | impersonation, homoglyph, filter, launchpad, anti-scam |
+| 6 | [OAuth server MCP sendiri (PKCE, dynamic client) + link login terikat browser asal](security/mcpcredit-mcp-oauth-browser-bound-login.md) | mcp.credit (MCP Market) | verified | mcp, oauth2, pkce, phishing, session, x-login |
 | 6 | [Early access "citizenship": waitlist referral + wallet + kode, batas akun per device, guest session](security/sindicat-early-access-citizenship-gate.md) | SINDICAT | verified | early-access, waitlist, sybil, referral, privy, gating |
 | 6 | [Tiket fight dari server + durasi minimum sebelum hasil diterima (anti-cheat ringan)](security/tinylegends-fight-ticket-min-duration.md) | Tiny Legends | verified | anti-cheat, game, p2e, rate-limit, server-ticket |
 
@@ -60,6 +66,7 @@ Total: 34 entry
 
 | Skor | Tech | Project | Status | Tags |
 |---|---|---|---|---|
+| 8 | [Proof of reserves live: held vs owed (balance + withdrawal + escrow) tiap 10 menit](data/mcpcredit-live-proof-of-reserves.md) | mcp.credit (MCP Market) | verified | proof-of-reserves, transparency, custodial, accounting |
 | 8 | [Mint recipe dari tx sukses + replay eth_call dengan state override](data/mintradar-recipe-replay-state-override.md) | Mint Radar (punya sendiri) | verified | indexer, eth_call, state-override, recon, automation |
 | 7 | [Sinyal radar mint (deployer record, two-phase, timed, 72h outcome)](data/agenticmint-radar-signals.md) | agenticmint.ai (Dr.OVG) | verified | radar, scoring, deployer, analytics |
 
@@ -67,6 +74,7 @@ Total: 34 entry
 
 | Skor | Tech | Project | Status | Tags |
 |---|---|---|---|---|
+| 7 | [Launchpad NFT dengan escrow uang mint (hold min. 7 hari) + freeze yang refund penuh](tokenomics/mcpcredit-launchpad-escrow-hold-freeze-refund.md) | mcp.credit (MCP Market) | verified | launchpad, escrow, anti-rug, refund, creator-payout |
 | 7 | [Heat + laundering: risiko pegang cash dan exit token yang dipersempit lewat "front business"](tokenomics/sindicat-heat-laundering-exit-throttle.md) | SINDICAT | verified | game-economy, outflow-control, emission, sink, lore-driven-design, p2e |
 | 7 | [Poin harian dipatok USD, dibayar dari pool harian pro-rata ("never pays more than the pool holds")](tokenomics/tinylegends-daily-pool-prorata-points.md) | Tiny Legends | verified | p2e, reward-pool, oracle, pro-rata, emission-control, game-economy |
 | 6 | [Rent ke holder epoch sebelumnya](tokenomics/hashcats-rent-to-earlier-holders.md) | Hashcats (hashcats.fun) | verified | nft, revenue-share, epoch, price-curve |
