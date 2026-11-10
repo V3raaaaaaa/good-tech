@@ -117,6 +117,8 @@ LINT_RULES = [
     ("secret assignment", re.compile(r"(?i)\b(?:private[_ ]?key|api[_-]?key|secret|mnemonic|seed phrase)\s*[:=]\s*\S{8,}")),
     ("openai/anthropic key", re.compile(r"\bsk-(?:ant-)?[A-Za-z0-9_-]{20,}")),
     ("raw private key", re.compile(r"(?i)(?:privkey|private key)[^\n]{0,20}0x[0-9a-f]{64}")),
+    # the repo is public: no hints about our own minting/farming ops or private relationships
+    ("own ops / relationship", re.compile(r"(?i)\b(?:kode kita|bot kita|wallet kita|kita lakuin|live run|site temen|punya temen|we minted|our bot)\b")),
 ]
 
 

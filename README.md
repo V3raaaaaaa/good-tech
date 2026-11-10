@@ -42,7 +42,8 @@ git add -A && git commit -m "add: <project> <tech>" && git push
 ```
 
 - Satu entry = satu commit biar gampang di-review.
-- `lint` nolak link ke catatan pribadi (`[[...]]`), path folder lokal (`*-recon/`, folder bot), dan apapun yang mirip secret. Commit ditolak kalau lint gagal.
+- Repo ini **public**. `lint` nolak link ke catatan pribadi (`[[...]]`), path folder lokal (`*-recon/`, folder bot), apapun yang mirip secret, dan kalimat soal operasi/relasi pribadi. Commit ditolak kalau lint gagal.
+- Jangan tulis nama orang dari tim anon (ganti `<A>`/`<B>`), dan jangan tulis wallet/hasil mint/profit pribadi.
 - Bukti yang nunjuk file lokal ditulis "snapshot recon" / "laporan recon internal". Kalau ada sumber publik (explorer, repo, URL), pakai itu.
 
 ## Aturan isi
