@@ -2,17 +2,20 @@
 
 Digenerate oleh `python3 goodtech.py index`. Jangan edit manual.
 
-Total: 42 entry
+Total: 50 entry
 
 ## contracts
 
 | Skor | Tech | Project | Status | Tags |
 |---|---|---|---|---|
 | 9 | [Launch coin + fee split permanen dalam satu Jito bundle](contracts/forkswiki-atomic-locked-fee-split-launch.md) | forks.wiki | verified | launchpad, pump-fun, fee-share, jito, bundle, github, non-custodial |
+| 9 | [Kunci token ke satu pool V4 kanonik: otorisasi transient per arah + ban venue lewat codehash](contracts/quotrons-v4-hook-canonical-routing-lock.md) | QUOTRONS | verified | uniswap-v4, hook, fee-enforcement, transient-storage, venue-lock, erc404 |
 | 8 | [On-chain keccak PoW mint (burst difficulty)](contracts/hashcats-onchain-keccak-pow-mint.md) | Hashcats (hashcats.fun) | verified | pow, mint, nft, difficulty, no-backend |
+| 8 | [Fee hook dipecah di dalam swap ke pot yang tujuannya dikunci (sealed sinks), tanpa fungsi sweep](contracts/quotrons-sealed-destination-locked-fee-pots.md) | QUOTRONS | verified | uniswap-v4, hook, fee-split, treasury, custody, keeper |
 | 8 | [Claim vault voucher EIP-712 + cap harian per wallet & global on-chain](contracts/tinylegends-claim-vault-voucher-daily-caps.md) | Tiny Legends | verified | p2e, voucher, eip712, claim, rate-limit, hot-key, game-economy |
 | 8 | [LP graduation full-range dikunci di locker tanpa fungsi remove](contracts/vibevibe-full-range-lp-locker-no-remove.md) | vibe/vibe (Seedify) | verified | uniswap-v4, lp-lock, graduation, anti-rug, immutable |
 | 8 | [Transfer token dikunci sampai graduate + allowlist venue](contracts/vibevibe-transfer-lock-venue-allowlist.md) | vibe/vibe (Seedify) | verified | launchpad, bonding-curve, anti-sniper, anti-rug, erc20, uniswap-v4 |
+| 7 | [Launch dengan finalisasi satu arah: fee launch 90% anti-sniper → 3% permanen, semua fungsi setup terkunci](contracts/quotrons-one-way-launch-finalization.md) | QUOTRONS | verified | launch, anti-snipe, finalization, setup-lock, admin-minimization |
 | 7 | [PoW mint dengan domain-separated digest + maxPrice + 1 mint/block](contracts/unicred-pow-maxprice-anchor-window.md) | UNICRED (unicred.fun) | verified | pow, mint, nft, slippage, uniswap-v4 |
 | 7 | [Tax token yang dikonfigurasi creator lewat hook Uniswap v4 (cash/reflection/burn/pair)](contracts/vibevibe-v4-hook-creator-tax-weights.md) | vibe/vibe (Seedify) | verified | uniswap-v4, hook, tax, reflection, buyback, tokenomics, launchpad |
 | 6 | [NFT reveal pakai block delay + offset, dan perk berdasarkan lama hold (heldSince)](contracts/tinylegends-founders-delayed-reveal-heldsince.md) | Tiny Legends (Founders NFT) | claimed | nft, reveal, randomness, holding-perk, erc721 |
@@ -35,6 +38,7 @@ Total: 42 entry
 
 | Skor | Tech | Project | Status | Tags |
 |---|---|---|---|---|
+| 7 | [Koleksi bisa direproduksi dari seed + hash assignment di chain, plus satu file markdown buat ditanya ke AI](frontend/quotrons-committed-generator-and-llm-doc.md) | QUOTRONS | claimed | nft, provenance, reproducibility, docs, llm, transparency |
 | 6 | [Codex aturan dengan angka asli game + landing pakai klip gameplay hover-to-play](frontend/sindicat-codex-and-filmed-landing.md) | SINDICAT | verified | docs, transparency, landing-page, onboarding, trust |
 | 6 | [Boot SPA bertahap: inline script prefetch data pertama + modulepreload dari manifest build](frontend/vibevibe-staged-prestart-boot.md) | vibe/vibe (Seedify) | verified | performance, lcp, vite, modulepreload, prefetch, spa |
 | 5 | [Komentar kode yang nyatet tanggal + siapa yang mutusin + varian yang dipilih](frontend/sindicat-dated-decision-comments.md) | SINDICAT | verified | dev-process, documentation, design-decisions, ai-assisted-dev |
@@ -55,10 +59,13 @@ Total: 42 entry
 | Skor | Tech | Project | Status | Tags |
 |---|---|---|---|---|
 | 9 | [Tool sensitif cuma bisa dipencet user: MCP Apps visibility "app" + form pass HMAC](security/mcpcredit-app-only-tools-form-pass.md) | mcp.credit (MCP Market) | verified | mcp, ai-agent, prompt-injection, withdraw, mcp-apps, custodial |
+| 9 | [Post-mortem insiden standar audit: label bukti, dual cutoff, Merkle alokasi, restitusi per event](security/quotrons-evidence-grade-postmortem.md) | QUOTRONS | verified | incident-response, post-mortem, migration, merkle, restitution, transparency |
+| 8 | [ERC-404/hybrid: hapus approval per token di SETIAP perubahan owner (pelajaran exploit V1)](security/quotrons-erc404-clear-approval-every-owner-change.md) | QUOTRONS | verified | erc404, erc721, approval, invariant, exploit-lesson, dn404 |
 | 7 | [Aksi via AI dua langkah: preview dulu, kode sekali pakai berlaku 10 detik-10 menit, plus rate limit](security/mcpcredit-two-step-send-preview-code.md) | mcp.credit (MCP Market) | verified | ai-agent, mcp, confirmation, rate-limit, prompt-injection |
 | 7 | [Buyback oleh keeper dengan batas on-chain + ganti treasury 2 langkah](security/vibevibe-keeper-buyback-onchain-limits.md) | vibe/vibe (Seedify) | verified | keeper, buyback, burn, timelock, treasury, admin-limits |
 | 6 | [Filter ticker/nama anti-impersonation (homoglyph + leet + fonetik)](security/forkswiki-homoglyph-ticker-filter.md) | forks.wiki | verified | impersonation, homoglyph, filter, launchpad, anti-scam |
 | 6 | [OAuth server MCP sendiri (PKCE, dynamic client) + link login terikat browser asal](security/mcpcredit-mcp-oauth-browser-bound-login.md) | mcp.credit (MCP Market) | verified | mcp, oauth2, pkce, phishing, session, x-login |
+| 6 | [Trading lewat command X pakai wallet terpisah dengan policy signer terbatas (Privy)](security/quotrons-x-command-restricted-signer.md) | QUOTRONS | claimed | agent, social-trading, privy, session-key, policy, x-commands |
 | 6 | [Early access "citizenship": waitlist referral + wallet + kode, batas akun per device, guest session](security/sindicat-early-access-citizenship-gate.md) | SINDICAT | verified | early-access, waitlist, sybil, referral, privy, gating |
 | 6 | [Tiket fight dari server + durasi minimum sebelum hasil diterima (anti-cheat ringan)](security/tinylegends-fight-ticket-min-duration.md) | Tiny Legends | verified | anti-cheat, game, p2e, rate-limit, server-ticket |
 
@@ -74,6 +81,7 @@ Total: 42 entry
 
 | Skor | Tech | Project | Status | Tags |
 |---|---|---|---|---|
+| 8 | ["Hardwire": burn unit likuid jadi NFT permanen yang dapet bagian fee (dibayar saham ter-tokenisasi) + gacha reroll](tokenomics/quotrons-hardwire-burn-to-fee-claim.md) | QUOTRONS | verified | erc404, burn, reflections, gacha, tokenized-stocks, flywheel |
 | 7 | [Launchpad NFT dengan escrow uang mint (hold min. 7 hari) + freeze yang refund penuh](tokenomics/mcpcredit-launchpad-escrow-hold-freeze-refund.md) | mcp.credit (MCP Market) | verified | launchpad, escrow, anti-rug, refund, creator-payout |
 | 7 | [Heat + laundering: risiko pegang cash dan exit token yang dipersempit lewat "front business"](tokenomics/sindicat-heat-laundering-exit-throttle.md) | SINDICAT | verified | game-economy, outflow-control, emission, sink, lore-driven-design, p2e |
 | 7 | [Poin harian dipatok USD, dibayar dari pool harian pro-rata ("never pays more than the pool holds")](tokenomics/tinylegends-daily-pool-prorata-points.md) | Tiny Legends | verified | p2e, reward-pool, oracle, pro-rata, emission-control, game-economy |
