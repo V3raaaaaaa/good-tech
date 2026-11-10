@@ -2,7 +2,7 @@
 
 Digenerate oleh `python3 goodtech.py index`. Jangan edit manual.
 
-Total: 77 entry
+Total: 91 entry
 
 ## contracts
 
@@ -38,8 +38,11 @@ Total: 77 entry
 | 8 | [Ticket stateless (HMAC + AES-GCM) antar step multi-request](backend/forkswiki-stateless-signed-tickets.md) | forks.wiki | verified | serverless, hmac, aes-gcm, stateless, session, security |
 | 8 | [Ledger append-only (trigger DB) + hash-chain + anchor memo di Solana, bisa diverifikasi di browser](backend/mcpcredit-ledger-hashchain-solana-anchor.md) | mcp.credit (MCP Market) | verified | ledger, audit-trail, hash-chain, anchoring, transparency, custodial |
 | 8 | [Sync game pakai intent + claim, ledger ekonomi di server, txid idempotent + versi](backend/sindicat-intent-claim-server-ledger.md) | SINDICAT | verified | game, server-authoritative, anti-cheat, sync, idempotency, optimistic-concurrency |
+| 8 | [Prepare → sign → submit dengan receipt UUID dari client](backend/tinylegendsfun-prepare-sign-submit-receipt.md) | Tiny Legends (tinylegends.fun) | verified | idempotency, embedded-wallet, privy, solana, custodial-bridge |
 | 7 | [Skill + API buat AI agent: llms.txt, skill.md untuk CLI wallet, endpoint yang ngebangun tx siap preview](backend/jagent-agent-skill-and-tx-builder.md) | $JAGENT (jager.live) | verified | ai-agent, llms-txt, skill, tx-builder, eip712-login, wallet-cli |
 | 7 | [Kredit deposit: webhook cuma petunjuk, server baca tx dari chain sendiri, unique per (tx, token account)](backend/mcpcredit-deposit-credit-from-chain.md) | mcp.credit (MCP Market) | verified | deposit, webhook, idempotency, solana, helius, reconciliation |
+| 7 | [Session cookie cuma dibuat on-demand + reservasi kode terikat cookie sampai di-claim](backend/nulls-explicit-session-mint-and-cookie-bound-reservation.md) | NULLS (nulls.world) | verified | sessions, idempotency, race-conditions, invite-codes, vercel |
+| 7 | [Bot self-registration + human claim code](backend/tinylegendsfun-agent-register-claim-code.md) | Tiny Legends (tinylegends.fun) | verified | ai-agents, onboarding, api-keys, skill-md, anti-sybil |
 | 7 | [Respons API indexer yang jujur soal freshness (asOfBlock + lag + coverage)](backend/vibevibe-indexer-freshness-envelope.md) | vibe/vibe (Seedify) | verified | indexer, api-design, freshness, pagination, reorg |
 | 6 | [Cloud save offline-first dengan merge berdasarkan progress + optimistic concurrency (409 stale)](backend/tinylegends-cloud-save-progress-merge.md) | Tiny Legends | verified | game, save-sync, offline-first, concurrency, siwe |
 | 6 | [Remote config live dengan skema min/max/type + endpoint harga ber-flag stale](backend/tinylegends-remote-config-bounded-overrides.md) | Tiny Legends | verified | remote-config, live-ops, feature-flags, oracle, game-economy |
@@ -49,9 +52,16 @@ Total: 77 entry
 | Skor | Tech | Project | Status | Tags |
 |---|---|---|---|---|
 | 9 | [Pack/loot provably fair pakai drand round masa depan + verifikasi BLS di browser](frontend/yieldfields-drand-provably-fair-packs-browser-verify.md) | Yield Fields | verified | randomness, drand, bls12-381, provably-fair, rejection-sampling, noble-curves |
+| 8 | [LLM ngeluarin parameter terbatas, avatar dirender prosedural](frontend/tinylegendsfun-llm-params-procedural-avatar.md) | Tiny Legends (tinylegends.fun) | verified | llm, structured-output, procedural-art, three-js, seeded-rng, cost |
 | 7 | [Bridge Privy embedded wallet ke Signer Sui (signRawHash → signPersonalMessage)](frontend/blastfun-privy-embedded-sui-signer-bridge.md) | Blast (blast.fun) | verified | privy, embedded-wallet, sui, signer, personal-message, onboarding |
+| 7 | [Request ber-deadline + single-flight op token biar jawaban telat gak ngubah layar](frontend/nulls-deadline-request-single-flight-op-token.md) | NULLS (nulls.world) | verified | abortcontroller, race-conditions, retries, spa, ux |
 | 7 | [Koleksi bisa direproduksi dari seed + hash assignment di chain, plus satu file markdown buat ditanya ke AI](frontend/quotrons-committed-generator-and-llm-doc.md) | QUOTRONS | claimed | nft, provenance, reproducibility, docs, llm, transparency |
+| 7 | [Dialog companion yang nempel ke event asli + filter kata duit](frontend/tinylegendsfun-grounded-companion-callbacks.md) | Tiny Legends (tinylegends.fun) | verified | ai-companion, ethics, retention, deterministic-dialog, anti-dark-pattern |
+| 7 | [Outbox offline-first buat memori companion AI](frontend/tinylegendsfun-offline-outbox-companion-memory.md) | Tiny Legends (tinylegends.fun) | verified | offline-first, outbox, localstorage, zod, sync, ai-companion |
 | 6 | [OAuth popup lewat BroadcastChannel + diagnosa per fase + fallback redirect di mobile](frontend/blastfun-oauth-popup-broadcastchannel-handoff.md) | Blast (blast.fun) | verified | oauth, popup, broadcastchannel, ux, error-handling |
+| 6 | [Share page per item + endpoint OG image server-side + export PNG di client](frontend/nulls-per-item-og-share-page.md) | NULLS (nulls.world) | verified | opengraph, social-share, canvas, vercel, virality |
+| 6 | [Share card publik yang dipisah dari data privat + SVG->PNG di browser](frontend/rebelkin-privacy-split-share-card.md) | RebelKin | verified | share-card, privacy, svg, canvas, og-image, virality |
+| 6 | [Validator link X post yang ketat (pakai URL parser, bukan regex mentah)](frontend/rebelkin-strict-x-post-url-validator.md) | RebelKin | verified | validation, url-parsing, x-api, input-hardening |
 | 6 | [Codex aturan dengan angka asli game + landing pakai klip gameplay hover-to-play](frontend/sindicat-codex-and-filmed-landing.md) | SINDICAT | verified | docs, transparency, landing-page, onboarding, trust |
 | 6 | [Boot SPA bertahap: inline script prefetch data pertama + modulepreload dari manifest build](frontend/vibevibe-staged-prestart-boot.md) | vibe/vibe (Seedify) | verified | performance, lcp, vite, modulepreload, prefetch, spa |
 | 6 | [Link referral per-user dengan OG card yang dirender di browser lalu di-upload](frontend/weirdcats-crawler-aware-referral-og-card.md) | Weird Cats | verified | og-image, referral, canvas, social-share, cache-busting, x-cards |
@@ -79,6 +89,8 @@ Total: 77 entry
 | 8 | [Delayed settings on-chain + publish dalam keadaan paused](security/blastfun-delayed-settings-paused-publication.md) | Blast (blast.fun) | verified | timelock, admin, pause, governance, rbac, move |
 | 8 | [ERC-404/hybrid: hapus approval per token di SETIAP perubahan owner (pelajaran exploit V1)](security/quotrons-erc404-clear-approval-every-owner-change.md) | QUOTRONS | verified | erc404, erc721, approval, invariant, exploit-lesson, dn404 |
 | 7 | [Aksi via AI dua langkah: preview dulu, kode sekali pakai berlaku 10 detik-10 menit, plus rate limit](security/mcpcredit-two-step-send-preview-code.md) | mcp.credit (MCP Market) | verified | ai-agent, mcp, confirmation, rate-limit, prompt-injection |
+| 7 | [X OAuth 2.0 PKCE read-only + state cookie yang di-scope ke path auth](security/nulls-x-oauth-pkce-readonly-scoped-state-cookie.md) | NULLS (nulls.world) | verified | oauth, pkce, x-login, cookies, least-privilege |
+| 7 | [CSP ketat + header lengkap buat halaman allowlist statis](security/rebelkin-strict-csp-static-allowlist.md) | RebelKin | verified | csp, security-headers, vercel, turnstile, clickjacking |
 | 7 | [Buyback oleh keeper dengan batas on-chain + ganti treasury 2 langkah](security/vibevibe-keeper-buyback-onchain-limits.md) | vibe/vibe (Seedify) | verified | keeper, buyback, burn, timelock, treasury, admin-limits |
 | 7 | [WL signup via X OAuth2 PKCE (scope minimal) + paste address, tanpa wallet connect](security/weirdcats-x-oauth-pkce-paste-address-wl.md) | Weird Cats | verified | oauth2, pkce, x-login, whitelist, no-signature, anti-drainer |
 | 7 | [Admin hub contract (owner router + scoped pauser role)](security/yieldfields-admin-hub-scoped-pauser.md) | Yield Fields | verified | access-control, multisig, pause, solady, ownable-roles |
@@ -98,7 +110,9 @@ Total: 77 entry
 | 8 | [Proof of reserves live: held vs owed (balance + withdrawal + escrow) tiap 10 menit](data/mcpcredit-live-proof-of-reserves.md) | mcp.credit (MCP Market) | verified | proof-of-reserves, transparency, custodial, accounting |
 | 8 | [Mint recipe dari tx sukses + replay eth_call dengan state override](data/mintradar-recipe-replay-state-override.md) | Mint Radar (punya sendiri) | verified | indexer, eth_call, state-override, recon, automation |
 | 7 | [Sinyal radar mint (deployer record, two-phase, timed, 72h outcome)](data/agenticmint-radar-signals.md) | agenticmint.ai (Dr.OVG) | verified | radar, scoring, deployer, analytics |
+| 7 | ["Counting house" publik buat poin off-chain sebelum token ada](data/tinylegendsfun-public-offchain-ledger-before-token.md) | Tiny Legends (tinylegends.fun) | verified | transparency, points, emission, burn, pre-token |
 | 6 | [Undian off-chain yang bisa di-reproduce pakai blockhash Ethereum](data/weirdcats-blockhash-modulo-public-draw.md) | Weird Cats | verified | randomness, raffle, provably-fair, blockhash, transparency |
+| 5 | [Assign archetype quiz yang deterministik dengan tie-break hash (bukan urutan array)](data/nulls-deterministic-quiz-archetype-hash-tiebreak.md) | NULLS (nulls.world) | verified | quiz, determinism, fnv1a, personalization |
 
 ## tokenomics
 
