@@ -2,7 +2,7 @@
 
 Digenerate oleh `python3 goodtech.py index`. Jangan edit manual.
 
-Total: 91 entry
+Total: 99 entry
 
 ## contracts
 
@@ -11,6 +11,7 @@ Total: 91 entry
 | 9 | [Immutable UpgradeCap manager dengan timelock 48 jam per cap (Sui)](contracts/blastfun-sui-upgradecap-timelock-manager.md) | Blast (blast.fun) | verified | upgrade, timelock, governance, move, custody |
 | 9 | [Launch coin + fee split permanen dalam satu Jito bundle](contracts/forkswiki-atomic-locked-fee-split-launch.md) | forks.wiki | verified | launchpad, pump-fun, fee-share, jito, bundle, github, non-custodial |
 | 9 | [Kunci token ke satu pool V4 kanonik: otorisasi transient per arah + ban venue lewat codehash](contracts/quotrons-v4-hook-canonical-routing-lock.md) | QUOTRONS | verified | uniswap-v4, hook, fee-enforcement, transient-storage, venue-lock, erc404 |
+| 8 | [Supply fixed di-mint sekali ke reserve, dirilis cuma lewat surrender NFT dengan receipt guard](contracts/balance-fixed-reserve-surrender-release.md) | BALANCE / Exchange (Jack Butcher) | verified | erc20, nft-to-token, fixed-supply, reentrancy, receipt |
 | 8 | [On-chain keccak PoW mint (burst difficulty)](contracts/hashcats-onchain-keccak-pow-mint.md) | Hashcats (hashcats.fun) | verified | pow, mint, nft, difficulty, no-backend |
 | 8 | [Admin yang bisa di-renounce on-chain, dengan batas keras sebelumnya (gak bisa blok pair/EOA/7702, pause cuma sebelum launch)](contracts/jagent-renounce-with-hard-limits.md) | $JAGENT (jager.live) | verified | admin-minimization, renounce, pause, pool-blocking, eip-7702, fair-mint |
 | 8 | [Fee hook dipecah di dalam swap ke pot yang tujuannya dikunci (sealed sinks), tanpa fungsi sweep](contracts/quotrons-sealed-destination-locked-fee-pots.md) | QUOTRONS | verified | uniswap-v4, hook, fee-split, treasury, custody, keeper |
@@ -19,6 +20,7 @@ Total: 91 entry
 | 8 | [Transfer token dikunci sampai graduate + allowlist venue](contracts/vibevibe-transfer-lock-venue-allowlist.md) | vibe/vibe (Seedify) | verified | launchpad, bonding-curve, anti-sniper, anti-rug, erc20, uniswap-v4 |
 | 8 | [Off-chain → on-chain item export pakai voucher EIP-712 dari KMS signer + daily cap on-chain](contracts/yieldfields-kms-signed-export-voucher-daily-cap.md) | Yield Fields | verified | eip712, voucher, aws-kms, erc1155, blast-radius, game-items |
 | 8 | [Rebate Dutch auction + GTD merkle + trading lock](contracts/yieldfields-rebate-dutch-auction-gtd.md) | Yield Fields | verified | nft-mint, dutch-auction, merkle, erc721a, erc721c, refund |
+| 7 | [Token "warna" CMYK yang ikut pindah proporsional tiap transfer (largest-remainder)](contracts/balance-proportional-ink-largest-remainder.md) | BALANCE / Exchange (Jack Butcher) | verified | erc20, provenance, art-token, rounding, transfer-hook |
 | 7 | [Creator rights buat akun sosial lewat account commitment + attestation backend](contracts/blastfun-creator-claim-account-attestation.md) | Blast (blast.fun) | verified | creator-fees, attestation, ed25519, domain-separation, social-login |
 | 7 | [Merkle allowlist dengan domain separation, index di leaf dan cap per wallet](contracts/blastfun-domain-separated-merkle-allowlist.md) | Blast (blast.fun) | verified | merkle, allowlist, presale, blake2b, second-preimage |
 | 7 | [Mint di-gate identitas on-chain (registrar Agent ID) + quota sosial pakai tanda tangan EIP-712 server, 1 akun sosial = 1 ID](contracts/jagent-agent-id-gate-and-signed-social-quota.md) | $JAGENT (jager.live) | verified | sybil-resistance, identity, eip712, quota, social-tasks, referral |
@@ -26,6 +28,7 @@ Total: 91 entry
 | 7 | [PoW mint dengan domain-separated digest + maxPrice + 1 mint/block](contracts/unicred-pow-maxprice-anchor-window.md) | UNICRED (unicred.fun) | verified | pow, mint, nft, slippage, uniswap-v4 |
 | 7 | [Tax token yang dikonfigurasi creator lewat hook Uniswap v4 (cash/reflection/burn/pair)](contracts/vibevibe-v4-hook-creator-tax-weights.md) | vibe/vibe (Seedify) | verified | uniswap-v4, hook, tax, reflection, buyback, tokenomics, launchpad |
 | 7 | [Staking escrow dengan ETH backing per-NFT (bobot fertility) + unstake tetap jalan saat pause](contracts/yieldfields-staking-eth-backing-exit-while-paused.md) | Yield Fields | verified | nft-staking, backing, burn-to-redeem, pause, erc7201, uups |
+| 6 | [Wallet-bound ERC-721 yang auto-mint pas address pertama kali nerima token](contracts/balance-auto-soulbound-wallet-artwork.md) | BALANCE / Exchange (Jack Butcher) | verified | erc721, soulbound, onchain-svg, erc20-hook, holder-art |
 | 6 | [Migrasi saldo ke kontrak baru yang dikunci total snapshot immutable (import cuma bisa ditutup kalau angkanya pas)](contracts/jagent-migration-import-locked-by-snapshot-total.md) | $JAGENT (jager.live) | verified | migration, snapshot, import, immutable, token-relaunch |
 | 6 | [NFT reveal pakai block delay + offset, dan perk berdasarkan lama hold (heldSince)](contracts/tinylegends-founders-delayed-reveal-heldsince.md) | Tiny Legends (Founders NFT) | claimed | nft, reveal, randomness, holding-perk, erc721 |
 | 6 | [Treasury yang otomatis split tiap pembayaran ke burn + reward pool](contracts/tinylegends-treasury-auto-split-burn-rewards.md) | Tiny Legends | verified | treasury, fee-split, burn, reward-pool, sink, game-economy |
@@ -52,12 +55,14 @@ Total: 91 entry
 | Skor | Tech | Project | Status | Tags |
 |---|---|---|---|---|
 | 9 | [Pack/loot provably fair pakai drand round masa depan + verifikasi BLS di browser](frontend/yieldfields-drand-provably-fair-packs-browser-verify.md) | Yield Fields | verified | randomness, drand, bls12-381, provably-fair, rejection-sampling, noble-curves |
+| 8 | [Frontend mode "unconfigured" sampai deploy record terverifikasi (hash, waktu, root di-cross-check)](frontend/bars-unconfigured-until-verified-deploy-record.md) | Bars (Jack Butcher / jack.art) | verified | deployment, integrity, runtime-hash, config, phishing-defense |
 | 8 | [LLM ngeluarin parameter terbatas, avatar dirender prosedural](frontend/tinylegendsfun-llm-params-procedural-avatar.md) | Tiny Legends (tinylegends.fun) | verified | llm, structured-output, procedural-art, three-js, seeded-rng, cost |
 | 7 | [Bridge Privy embedded wallet ke Signer Sui (signRawHash → signPersonalMessage)](frontend/blastfun-privy-embedded-sui-signer-bridge.md) | Blast (blast.fun) | verified | privy, embedded-wallet, sui, signer, personal-message, onboarding |
 | 7 | [Request ber-deadline + single-flight op token biar jawaban telat gak ngubah layar](frontend/nulls-deadline-request-single-flight-op-token.md) | NULLS (nulls.world) | verified | abortcontroller, race-conditions, retries, spa, ux |
 | 7 | [Koleksi bisa direproduksi dari seed + hash assignment di chain, plus satu file markdown buat ditanya ke AI](frontend/quotrons-committed-generator-and-llm-doc.md) | QUOTRONS | claimed | nft, provenance, reproducibility, docs, llm, transparency |
 | 7 | [Dialog companion yang nempel ke event asli + filter kata duit](frontend/tinylegendsfun-grounded-companion-callbacks.md) | Tiny Legends (tinylegends.fun) | verified | ai-companion, ethics, retention, deterministic-dialog, anti-dark-pattern |
 | 7 | [Outbox offline-first buat memori companion AI](frontend/tinylegendsfun-offline-outbox-companion-memory.md) | Tiny Legends (tinylegends.fun) | verified | offline-first, outbox, localstorage, zod, sync, ai-companion |
+| 6 | [Wrapper EIP-1193 yang cuma izinin method akun/jaringan, dedupe request, timeout jelas](frontend/bars-wallet-request-allowlist-dedupe.md) | Bars (Jack Butcher / jack.art) | verified | wallet, eip-1193, ux, timeout, dedupe |
 | 6 | [OAuth popup lewat BroadcastChannel + diagnosa per fase + fallback redirect di mobile](frontend/blastfun-oauth-popup-broadcastchannel-handoff.md) | Blast (blast.fun) | verified | oauth, popup, broadcastchannel, ux, error-handling |
 | 6 | [Share page per item + endpoint OG image server-side + export PNG di client](frontend/nulls-per-item-og-share-page.md) | NULLS (nulls.world) | verified | opengraph, social-share, canvas, vercel, virality |
 | 6 | [Share card publik yang dipisah dari data privat + SVG->PNG di browser](frontend/rebelkin-privacy-split-share-card.md) | RebelKin | verified | share-card, privacy, svg, canvas, og-image, virality |
@@ -96,6 +101,7 @@ Total: 91 entry
 | 7 | [Admin hub contract (owner router + scoped pauser role)](security/yieldfields-admin-hub-scoped-pauser.md) | Yield Fields | verified | access-control, multisig, pause, solady, ownable-roles |
 | 6 | [Gate cookie Fetch-Metadata + CSRF double-submit __Host- + fetch wrapper yang retry sendiri](security/blastfun-fetch-metadata-gate-csrf-retry.md) | Blast (blast.fun) | verified | csrf, fetch-metadata, cookies, nextjs, api-gateway, retry |
 | 6 | [Filter ticker/nama anti-impersonation (homoglyph + leet + fonetik)](security/forkswiki-homoglyph-ticker-filter.md) | forks.wiki | verified | impersonation, homoglyph, filter, launchpad, anti-scam |
+| 6 | [CSP ketat yang nge-pin RPC yang boleh dipanggil dApp](security/jackart-strict-csp-pinned-rpcs.md) | Exchange / Bars (jack.art) | verified | csp, headers, rpc, supply-chain |
 | 6 | [OAuth server MCP sendiri (PKCE, dynamic client) + link login terikat browser asal](security/mcpcredit-mcp-oauth-browser-bound-login.md) | mcp.credit (MCP Market) | verified | mcp, oauth2, pkce, phishing, session, x-login |
 | 6 | [Trading lewat command X pakai wallet terpisah dengan policy signer terbatas (Privy)](security/quotrons-x-command-restricted-signer.md) | QUOTRONS | claimed | agent, social-trading, privy, session-key, policy, x-commands |
 | 6 | [Early access "citizenship": waitlist referral + wallet + kode, batas akun per device, guest session](security/sindicat-early-access-citizenship-gate.md) | SINDICAT | verified | early-access, waitlist, sybil, referral, privy, gating |
@@ -107,6 +113,7 @@ Total: 91 entry
 
 | Skor | Tech | Project | Status | Tags |
 |---|---|---|---|---|
+| 8 | [Allowlist bertingkat dari perilaku on-chain ("never sold"), root bisa direproduksi dari JSON publik](data/bars-behavior-tiered-snapshot-allowlist.md) | Bars (Jack Butcher / jack.art) | verified | allowlist, merkle, snapshot, anti-dump, phased-mint |
 | 8 | [Proof of reserves live: held vs owed (balance + withdrawal + escrow) tiap 10 menit](data/mcpcredit-live-proof-of-reserves.md) | mcp.credit (MCP Market) | verified | proof-of-reserves, transparency, custodial, accounting |
 | 8 | [Mint recipe dari tx sukses + replay eth_call dengan state override](data/mintradar-recipe-replay-state-override.md) | Mint Radar (punya sendiri) | verified | indexer, eth_call, state-override, recon, automation |
 | 7 | [Sinyal radar mint (deployer record, two-phase, timed, 72h outcome)](data/agenticmint-radar-signals.md) | agenticmint.ai (Dr.OVG) | verified | radar, scoring, deployer, analytics |
@@ -120,6 +127,7 @@ Total: 91 entry
 |---|---|---|---|---|
 | 9 | [Opening round harga seragam (batch buy) buat lawan sniper di bonding curve](tokenomics/blastfun-uniform-price-opening-round.md) | Blast (blast.fun) | verified | anti-sniper, bonding-curve, batch-auction, fair-launch, move |
 | 8 | ["Hardwire": burn unit likuid jadi NFT permanen yang dapet bagian fee (dibayar saham ter-tokenisasi) + gacha reroll](tokenomics/quotrons-hardwire-burn-to-fee-claim.md) | QUOTRONS | verified | erc404, burn, reflections, gacha, tokenized-stocks, flywheel |
+| 7 | [NFT bernomor yang "dicetak" dari token: Bar #n mengunci n token, bisa dilebur balik](tokenomics/bars-triangular-cost-lock-melt.md) | Bars (Jack Butcher / jack.art) | claimed | nft, token-backed, sink, triangular-pricing, melt, vault-per-nft |
 | 7 | [Fair mint yang tiap pembayaran langsung jadi LP terkunci (80%) + harga bertingkat + floor line](tokenomics/jagent-fair-mint-into-locked-lp.md) | $JAGENT (jager.live) | verified | fair-mint, liquidity, lp-burn, price-curve, floor, launchpad |
 | 7 | [Launchpad NFT dengan escrow uang mint (hold min. 7 hari) + freeze yang refund penuh](tokenomics/mcpcredit-launchpad-escrow-hold-freeze-refund.md) | mcp.credit (MCP Market) | verified | launchpad, escrow, anti-rug, refund, creator-payout |
 | 7 | [Heat + laundering: risiko pegang cash dan exit token yang dipersempit lewat "front business"](tokenomics/sindicat-heat-laundering-exit-throttle.md) | SINDICAT | verified | game-economy, outflow-control, emission, sink, lore-driven-design, p2e |
