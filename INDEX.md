@@ -2,7 +2,7 @@
 
 Digenerate oleh `python3 goodtech.py index`. Jangan edit manual.
 
-Total: 99 entry
+Total: 104 entry
 
 ## contracts
 
@@ -47,6 +47,7 @@ Total: 99 entry
 | 7 | [Session cookie cuma dibuat on-demand + reservasi kode terikat cookie sampai di-claim](backend/nulls-explicit-session-mint-and-cookie-bound-reservation.md) | NULLS (nulls.world) | verified | sessions, idempotency, race-conditions, invite-codes, vercel |
 | 7 | [Bot self-registration + human claim code](backend/tinylegendsfun-agent-register-claim-code.md) | Tiny Legends (tinylegends.fun) | verified | ai-agents, onboarding, api-keys, skill-md, anti-sybil |
 | 7 | [Respons API indexer yang jujur soal freshness (asOfBlock + lag + coverage)](backend/vibevibe-indexer-freshness-envelope.md) | vibe/vibe (Seedify) | verified | indexer, api-design, freshness, pagination, reorg |
+| 6 | [Status checkout + headroom per user dari server (kill-switch per metode bayar)](backend/breakout-server-driven-checkout-status-headroom.md) | Breakout (breakoutprop.com) | verified | checkout, kill-switch, payments, cap, api-design |
 | 6 | [Cloud save offline-first dengan merge berdasarkan progress + optimistic concurrency (409 stale)](backend/tinylegends-cloud-save-progress-merge.md) | Tiny Legends | verified | game, save-sync, offline-first, concurrency, siwe |
 | 6 | [Remote config live dengan skema min/max/type + endpoint harga ber-flag stale](backend/tinylegends-remote-config-bounded-overrides.md) | Tiny Legends | verified | remote-config, live-ops, feature-flags, oracle, game-economy |
 
@@ -100,6 +101,7 @@ Total: 99 entry
 | 7 | [WL signup via X OAuth2 PKCE (scope minimal) + paste address, tanpa wallet connect](security/weirdcats-x-oauth-pkce-paste-address-wl.md) | Weird Cats | verified | oauth2, pkce, x-login, whitelist, no-signature, anti-drainer |
 | 7 | [Admin hub contract (owner router + scoped pauser role)](security/yieldfields-admin-hub-scoped-pauser.md) | Yield Fields | verified | access-control, multisig, pause, solady, ownable-roles |
 | 6 | [Gate cookie Fetch-Metadata + CSRF double-submit __Host- + fetch wrapper yang retry sendiri](security/blastfun-fetch-metadata-gate-csrf-retry.md) | Blast (blast.fun) | verified | csrf, fetch-metadata, cookies, nextjs, api-gateway, retry |
+| 6 | [Proof-of-work kecil di browser sebelum bikin sesi](security/breakout-login-pow-double-sha256.md) | Breakout (breakoutprop.com) | verified | anti-bot, pow, login, rate-limit, session |
 | 6 | [Filter ticker/nama anti-impersonation (homoglyph + leet + fonetik)](security/forkswiki-homoglyph-ticker-filter.md) | forks.wiki | verified | impersonation, homoglyph, filter, launchpad, anti-scam |
 | 6 | [CSP ketat yang nge-pin RPC yang boleh dipanggil dApp](security/jackart-strict-csp-pinned-rpcs.md) | Exchange / Bars (jack.art) | verified | csp, headers, rpc, supply-chain |
 | 6 | [OAuth server MCP sendiri (PKCE, dynamic client) + link login terikat browser asal](security/mcpcredit-mcp-oauth-browser-bound-login.md) | mcp.credit (MCP Market) | verified | mcp, oauth2, pkce, phishing, session, x-login |
@@ -117,6 +119,7 @@ Total: 99 entry
 | 8 | [Proof of reserves live: held vs owed (balance + withdrawal + escrow) tiap 10 menit](data/mcpcredit-live-proof-of-reserves.md) | mcp.credit (MCP Market) | verified | proof-of-reserves, transparency, custodial, accounting |
 | 8 | [Mint recipe dari tx sukses + replay eth_call dengan state override](data/mintradar-recipe-replay-state-override.md) | Mint Radar (punya sendiri) | verified | indexer, eth_call, state-override, recon, automation |
 | 7 | [Sinyal radar mint (deployer record, two-phase, timed, 72h outcome)](data/agenticmint-radar-signals.md) | agenticmint.ai (Dr.OVG) | verified | radar, scoring, deployer, analytics |
+| 7 | [Trailing floor yang cuma pindah sekali sehari, high-water mark dicatat real-time](data/breakout-trailing-floor-daily-rollover-hwm.md) | Breakout (breakoutprop.com) | verified | risk-engine, drawdown, high-water-mark, rollover, payout, ledger |
 | 7 | ["Counting house" publik buat poin off-chain sebelum token ada](data/tinylegendsfun-public-offchain-ledger-before-token.md) | Tiny Legends (tinylegends.fun) | verified | transparency, points, emission, burn, pre-token |
 | 6 | [Undian off-chain yang bisa di-reproduce pakai blockhash Ethereum](data/weirdcats-blockhash-modulo-public-draw.md) | Weird Cats | verified | randomness, raffle, provably-fair, blockhash, transparency |
 | 5 | [Assign archetype quiz yang deterministik dengan tie-break hash (bukan urutan array)](data/nulls-deterministic-quiz-archetype-hash-tiebreak.md) | NULLS (nulls.world) | verified | quiz, determinism, fnv1a, personalization |
@@ -128,12 +131,14 @@ Total: 99 entry
 | 9 | [Opening round harga seragam (batch buy) buat lawan sniper di bonding curve](tokenomics/blastfun-uniform-price-opening-round.md) | Blast (blast.fun) | verified | anti-sniper, bonding-curve, batch-auction, fair-launch, move |
 | 8 | ["Hardwire": burn unit likuid jadi NFT permanen yang dapet bagian fee (dibayar saham ter-tokenisasi) + gacha reroll](tokenomics/quotrons-hardwire-burn-to-fee-claim.md) | QUOTRONS | verified | erc404, burn, reflections, gacha, tokenized-stocks, flywheel |
 | 7 | [NFT bernomor yang "dicetak" dari token: Bar #n mengunci n token, bisa dilebur balik](tokenomics/bars-triangular-cost-lock-melt.md) | Bars (Jack Butcher / jack.art) | claimed | nft, token-backed, sink, triangular-pricing, melt, vault-per-nft |
+| 7 | [SKU rilis terbatas buat produk yang sengaja "kemurahan" (liabilitas dibatesin jumlah unit)](tokenomics/breakout-capped-release-sku-bounded-liability.md) | Breakout (breakoutprop.com) | verified | pricing, limited-release, loss-leader, risk-cap, prop-firm, launch |
 | 7 | [Fair mint yang tiap pembayaran langsung jadi LP terkunci (80%) + harga bertingkat + floor line](tokenomics/jagent-fair-mint-into-locked-lp.md) | $JAGENT (jager.live) | verified | fair-mint, liquidity, lp-burn, price-curve, floor, launchpad |
 | 7 | [Launchpad NFT dengan escrow uang mint (hold min. 7 hari) + freeze yang refund penuh](tokenomics/mcpcredit-launchpad-escrow-hold-freeze-refund.md) | mcp.credit (MCP Market) | verified | launchpad, escrow, anti-rug, refund, creator-payout |
 | 7 | [Heat + laundering: risiko pegang cash dan exit token yang dipersempit lewat "front business"](tokenomics/sindicat-heat-laundering-exit-throttle.md) | SINDICAT | verified | game-economy, outflow-control, emission, sink, lore-driven-design, p2e |
 | 7 | [Poin harian dipatok USD, dibayar dari pool harian pro-rata ("never pays more than the pool holds")](tokenomics/tinylegends-daily-pool-prorata-points.md) | Tiny Legends | verified | p2e, reward-pool, oracle, pro-rata, emission-control, game-economy |
 | 7 | [Buyback vault permissionless (keeper reward, rate harian, 1 buy per blok, price guard)](tokenomics/yieldfields-permissionless-keeper-buyback-vault.md) | Yield Fields | claimed | buyback, keeper, twap, mev, treasury |
 | 7 | [Throttle emisi berbasis supply beredar + penalti per-exporter](tokenomics/yieldfields-supply-aware-emission-throttle.md) | Yield Fields | verified | emission, anti-dump, game-economy, rate-limit, public-metrics |
+| 6 | [Affiliate lewat kode diskon saja, komisi order pertama, tier naik per jumlah referral](tokenomics/breakout-affiliate-code-only-first-order-tiers.md) | Breakout (breakoutprop.com) | claimed | affiliate, referral, attribution, commission, anti-abuse |
 | 6 | [Rent ke holder epoch sebelumnya](tokenomics/hashcats-rent-to-earlier-holders.md) | Hashcats (hashcats.fun) | verified | nft, revenue-share, epoch, price-curve |
 | 6 | [Fee withdraw yang turun tiap hari nunggu + hold rule anti-dump](tokenomics/tinylegends-decaying-withdraw-fee-hold-rule.md) | Tiny Legends | verified | p2e, withdraw-fee, anti-dump, anti-bot, vesting |
 | 5 | [Harga launch window terbatas + progress offline dengan cap dan efisiensi](tokenomics/tinylegends-launch-window-offline-cap.md) | Tiny Legends | verified | game-design, idle, launch-pricing, retention, fomo |
