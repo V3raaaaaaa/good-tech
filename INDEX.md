@@ -2,7 +2,7 @@
 
 Digenerate oleh `python3 goodtech.py index`. Jangan edit manual.
 
-Total: 104 entry
+Total: 107 entry
 
 ## contracts
 
@@ -32,6 +32,7 @@ Total: 104 entry
 | 6 | [Migrasi saldo ke kontrak baru yang dikunci total snapshot immutable (import cuma bisa ditutup kalau angkanya pas)](contracts/jagent-migration-import-locked-by-snapshot-total.md) | $JAGENT (jager.live) | verified | migration, snapshot, import, immutable, token-relaunch |
 | 6 | [NFT reveal pakai block delay + offset, dan perk berdasarkan lama hold (heldSince)](contracts/tinylegends-founders-delayed-reveal-heldsince.md) | Tiny Legends (Founders NFT) | claimed | nft, reveal, randomness, holding-perk, erc721 |
 | 6 | [Treasury yang otomatis split tiap pembayaran ke burn + reward pool](contracts/tinylegends-treasury-auto-split-burn-rewards.md) | Tiny Legends | verified | treasury, fee-split, burn, reward-pool, sink, game-economy |
+| 5 | [Testnet engagement NFT — cooldown mint + metadata data-URI dengan artwork rotasi](contracts/giwaup-testnet-cooldown-mint-rotating-datauri.md) | GIWA UP (giwaup.xyz) | verified | erc721, testnet, cooldown, data-uri, onchain-metadata, engagement, pre-mainnet |
 
 ## backend
 
@@ -103,6 +104,7 @@ Total: 104 entry
 | 6 | [Gate cookie Fetch-Metadata + CSRF double-submit __Host- + fetch wrapper yang retry sendiri](security/blastfun-fetch-metadata-gate-csrf-retry.md) | Blast (blast.fun) | verified | csrf, fetch-metadata, cookies, nextjs, api-gateway, retry |
 | 6 | [Proof-of-work kecil di browser sebelum bikin sesi](security/breakout-login-pow-double-sha256.md) | Breakout (breakoutprop.com) | verified | anti-bot, pow, login, rate-limit, session |
 | 6 | [Filter ticker/nama anti-impersonation (homoglyph + leet + fonetik)](security/forkswiki-homoglyph-ticker-filter.md) | forks.wiki | verified | impersonation, homoglyph, filter, launchpad, anti-scam |
+| 6 | [Data operasional allowlist jangan ikut ke client bundle (pelajaran dari GIWA UP)](security/giwaup-allowlist-ops-data-out-of-client-bundle.md) | GIWA UP (giwaup.xyz) | verified | allowlist, whitelist, nextjs, bundle-leak, google-sheets, pii, lesson, anti-pattern |
 | 6 | [CSP ketat yang nge-pin RPC yang boleh dipanggil dApp](security/jackart-strict-csp-pinned-rpcs.md) | Exchange / Bars (jack.art) | verified | csp, headers, rpc, supply-chain |
 | 6 | [OAuth server MCP sendiri (PKCE, dynamic client) + link login terikat browser asal](security/mcpcredit-mcp-oauth-browser-bound-login.md) | mcp.credit (MCP Market) | verified | mcp, oauth2, pkce, phishing, session, x-login |
 | 6 | [Trading lewat command X pakai wallet terpisah dengan policy signer terbatas (Privy)](security/quotrons-x-command-restricted-signer.md) | QUOTRONS | claimed | agent, social-trading, privy, session-key, policy, x-commands |
@@ -120,6 +122,7 @@ Total: 104 entry
 | 8 | [Mint recipe dari tx sukses + replay eth_call dengan state override](data/mintradar-recipe-replay-state-override.md) | Mint Radar (punya sendiri) | verified | indexer, eth_call, state-override, recon, automation |
 | 7 | [Sinyal radar mint (deployer record, two-phase, timed, 72h outcome)](data/agenticmint-radar-signals.md) | agenticmint.ai (Dr.OVG) | verified | radar, scoring, deployer, analytics |
 | 7 | [Trailing floor yang cuma pindah sekali sehari, high-water mark dicatat real-time](data/breakout-trailing-floor-daily-rollover-hwm.md) | Breakout (breakoutprop.com) | verified | risk-engine, drawdown, high-water-mark, rollover, payout, ledger |
+| 7 | [Deteksi holder count yang digelembungin lewat owner batch airdrop](data/giwaup-owner-batch-airdrop-inflated-holder-count.md) | GIWA UP (giwaup.xyz) | verified | recon-method, holders, airdrop, vanity-metric, blockscout, calldata, due-diligence |
 | 7 | ["Counting house" publik buat poin off-chain sebelum token ada](data/tinylegendsfun-public-offchain-ledger-before-token.md) | Tiny Legends (tinylegends.fun) | verified | transparency, points, emission, burn, pre-token |
 | 6 | [Undian off-chain yang bisa di-reproduce pakai blockhash Ethereum](data/weirdcats-blockhash-modulo-public-draw.md) | Weird Cats | verified | randomness, raffle, provably-fair, blockhash, transparency |
 | 5 | [Assign archetype quiz yang deterministik dengan tie-break hash (bukan urutan array)](data/nulls-deterministic-quiz-archetype-hash-tiebreak.md) | NULLS (nulls.world) | verified | quiz, determinism, fnv1a, personalization |
